@@ -1,0 +1,46 @@
+# Verification
+
+## Objective
+
+Verify that the GRE tunnel is operational and traffic is flowing successfully.
+
+---
+
+## Commands Used
+
+```bash
+show ip interface brief
+show interface tunnel0
+show ip route
+show running-config interface Tunnel0
+ping
+traceroute
+```
+
+---
+
+## Expected Results
+
+### Tunnel Status
+
+Tunnel0 should be:
+
+```
+Tunnel0 is up
+Line protocol is up
+```
+
+### Routing
+
+Routes to the remote LAN should point through Tunnel0.
+
+### Connectivity
+
+- Ping between LAN1 and LAN2 should succeed.
+- Traceroute should traverse the GRE tunnel.
+
+---
+
+## Result
+
+GRE tunnel established successfully and end-to-end communication verified.
